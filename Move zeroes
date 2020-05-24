@@ -1,0 +1,17 @@
+not optimal:
+
+class Solution:
+    def moveZeroes(self, nums: List[int]) -> None:
+        l = len(nums)
+        j = l-1
+        for i in range(l-2,-1,-1):
+            if nums[j] == 0:
+                j-=1
+            elif(nums[i] == 0):
+                nums[i] = nums[j]
+                nums[j] = 0
+                j-=1
+                
+                
+     
+        
